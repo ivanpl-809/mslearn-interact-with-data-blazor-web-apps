@@ -1,0 +1,41 @@
+# Query: £
+# ContextLines: 1
+
+8 results - 5 files
+
+Pages\Checkout.razor:
+  26                      Total price:
+  27:                     £@Order.GetFormattedTotalPrice()
+  28                  </strong>
+
+Pages\MyOrders.razor:
+  27                          Total price:
+  28:                         <strong>£@item.Order.GetFormattedTotalPrice()</strong>
+  29                      </div>
+
+Pages\OrderDetail.razor:
+  44                                @pizza.Special.Name
+  45:                               (£@pizza.GetFormattedTotalPrice())
+  46                            </strong>
+
+Shared\ConfigurePizzaDialog.razor:
+  12                  <input type="range" min="@Pizza.MinimumSize" max="@Pizza.MaximumSize" step="1" @bind="Pizza.Size" @bind:event="oninput" />                <span class="size-label">
+  13:                     @(Pizza.Size)" (£@(Pizza.GetFormattedTotalPrice()))
+  14                  </span>
+
+wwwroot\css\site.css:
+  201  .price::before {
+  202:     content: '£';
+  203      font-weight: 300;
+
+  253          .order-total .total-price::before {
+  254:             content: '£';
+  255              font-weight: 300;
+
+  310      .item-price::before {
+  311:         content: '£';
+  312          font-weight: 100;
+
+  457  .dialog .topping-price::before {
+  458:     content: '£';
+  459  }
